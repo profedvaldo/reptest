@@ -1,0 +1,70 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Gustavo</title>
+		<style>
+			body{
+				background-color: black;
+				color: white;
+			}
+			h1, h2{
+				color: orange;
+				
+			}
+			#acertow{
+				color = green;
+			}
+			#errow{
+				color= red;
+			}
+			
+		</style>
+		<script>
+			
+			//var input = document.querySelector("input");
+
+			function verifica(input) {
+			
+				//alert(input);
+				
+				var segredo = 8;
+
+				if(segredo == input) {
+					document.getElementById("resultado").innerHTML = "<marquee id='acertow'>Acertô</marquee>";
+				}
+				else {
+					document.getElementById("resultado").innerHTML = "<marquee id='errow'><img src='https://media1.tenor.com/images/aee1c181892814a8352e03fd4b0e0207/tenor.gif?itemid=9324361' /></marquee>";
+				}
+			}
+			
+			//var button = document.querySelector("button");
+			//button.onclick = verifica;
+		</script>
+
+	
+	</head>
+	<body>
+		<h1>Página do Gustavo</h1>
+	
+		<p> Esta é a página do gustavo, usamos ela como exemplo no edutech</p>
+		
+		<h2>Vamos adaptar o código da alura</h2>
+		
+		<h2>mãos a obra</h2>
+		
+		<a href="https://youtube.com" target="_blank">
+		<img width="100" height="80" src="https://bestcars.com.br/bc/wp-content/uploads/2020/07/1982-Chevrolet-Monza-SLE-05.jpg" />
+		</a>
+		<br>
+		
+		<input type="number" min="1" max="10" id ="entrada" />
+		<button onclick="verifica(entrada.value)">Compare com o número que estou pensando!</button>
+		
+		<div id = "resultado"></div>
+		
+		
+
+		
+		
+	</body>
+</html>

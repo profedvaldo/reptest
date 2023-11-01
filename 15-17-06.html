@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<title>Cria quadrado</title>
+		
+		<script>
+			function cria_quadro(quantidade){
+			
+				var i;
+					for (i = 0; i < quantidade; i++) {
+			
+						var x = Math.round(Math.random() * (800 - 0) + 0);
+						var y = Math.round(Math.random() * (600 - 0) + 0);
+					
+						var r = Math.round(Math.random() * (255 - 0) + 0);
+						var g = Math.round(Math.random() * (255 - 0) + 0);
+						var b = Math.round(Math.random() * (155 - 0) + 0);
+					
+						var canvas = document.getElementById("myCanvas");
+						var ctx = canvas.getContext("2d");
+						ctx.fillStyle = "rgb("+r+","+g+","+ b+")";
+						
+						ctx.fillRect(x, y, 80, 80);
+						 //          x  y  ta  al
+					}	
+			}
+			function limpar(){
+				
+				var canvas = document.getElementById("myCanvas");
+				var ctx = canvas.getContext("2d");
+				ctx.clearRect(0, 0, 800, 600);
+			
+			}
+
+		</script>
+	
+	</head>
+	
+	
+	<body>
+		<canvas width="800" height="600" id="myCanvas">
+			Seu navedor não suporta o canvas.
+		</canvas>
+		
+		<br >
+		<input type="number" id="quantidade">
+		<button onclick="cria_quadro(quantidade.value);" > Cria quadrado aleatorio </button>
+		<button onclick="limpar()">Limpar desenho</button>
+
+
+		
+			
+	</body>
+
+
+
+</html>
